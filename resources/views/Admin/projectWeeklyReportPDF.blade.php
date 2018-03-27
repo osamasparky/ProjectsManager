@@ -34,8 +34,9 @@
         }
 
         .intro {
-            background: url('{{asset('documents/projects/'.$project->image)}}') no-repeat left top;
-            background-size: 100% auto;
+            background: url('{{asset('documents/projects/'.$project->image)}}') no-repeat  top;
+            margin: auto;
+            background-size:cover;
 
         }
 
