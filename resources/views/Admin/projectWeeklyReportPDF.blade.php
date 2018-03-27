@@ -34,8 +34,9 @@
         }
 
         .intro {
-            background: url('{{asset('documents/projects/'.$project->image)}}') no-repeat left top;
-            background-size: 100% auto;
+            background: url('{{asset('documents/projects/'.$project->image)}}') no-repeat  top;
+            margin: auto;
+            background-size:cover;
 
         }
 
@@ -43,19 +44,23 @@
             position: absolute;
             bottom: 0px;
             background-color: #333333;
-            padding: 50px 20px;
             width: 100%;
             text-align: left;
         }
-
         .intro-title {
+            position: absolute;
             text-align: center;
-            background-color: #333333;
             color: #29a6d3;
-            display: inline-block;
-            padding: 25px 25px 25px 80px;
-            margin-top: 100px;
-            border-radius: 150px 0px 0px 0px;
+            right: 10px;
+            bottom: 230px;
+            
+            
+        }
+        .intro-decouration {
+           position: absolute;
+            bottom: 101px;
+            width: 100%;
+            text-align: left;
         }
 
         .intro-title span {
@@ -130,14 +135,21 @@
 
 <div class="contains" id="printPdf">
     <div class="page intro">
-        <div class="intro-title">
+        
+        <div class="intro-decouration">
+            <div class="intro-decouration-img">
+            <div class="intro-title">
             <h2>مشروع: {{$project->name}}</h2>
             <span>التقرير الاسبوعي</span>
             <span>من {{$report->starting_date}} الي {{$report->ending_date}}</span>
         </div>
+                <img src="{{asset('images/intro_decouration.png')}}" style="width: 100%;">
+            </div>
+
+        </div>
         <div class="intro-footer">
             <div class="logo-footer">
-                <img src="{{asset('images/logo.png')}}" style="width: 30%;">
+                <img src="{{asset('images/logo-complete.png')}}" style="width: 100%;">
             </div>
         </div>
 
