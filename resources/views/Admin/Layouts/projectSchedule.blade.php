@@ -4,7 +4,7 @@
             <div class="col-sm-12">
                 <div class="panel panel-default card-view">
                     @if(in_array(auth()->user()->permission->contractorPermissions->schedule,[7]) || auth()->guard('web')->check())
-                        <div class="modal fade" id="add_new_Test_Paper_model" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
+                        <div class="modal fade" id="add_new_Schedule_Paper_model" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -59,7 +59,7 @@
                             </div>
                         </div>
                         <div>
-                            <button class="btn btn-success btn-rounded btn-block btn-anim" data-toggle="modal" data-target="#add_new_Test_Paper_model" data-whatever="@">
+                            <button class="btn btn-success btn-rounded btn-block btn-anim" data-toggle="modal" data-target="#add_new_Schedule_Paper_model" data-whatever="@">
                                 <i class="fa fa-pencil"></i><span class="btn-text">انشاء جدول ذمني</span></button>
                         </div>
                     @endif
