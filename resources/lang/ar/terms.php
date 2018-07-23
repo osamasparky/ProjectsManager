@@ -14,4 +14,8 @@ return [
     'lap' => 'مختبر',
     'manager'=>'مدير المشروع',
     'architect'=>'مهندس مدني',
+    'exported'=>'صادر',
+	'power'=>'كهرباء',
+	'mechanical'=>'ميكانيكا',
+	'electrical'=>'كهرباء',
 ];
