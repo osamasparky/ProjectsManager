@@ -56,7 +56,7 @@ abstract class AbstractCollectData {
         return $value;
     }
     /**
-     * @return type array
+     * @return array
      */
     abstract public function collect();
 

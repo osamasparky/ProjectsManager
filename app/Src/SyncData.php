@@ -60,7 +60,7 @@ class SyncData
 
     private function setColumnListing()
     {
-        $this->columnListing = $this->hasMany->getRElated()->getFillable();
+        $this->columnListing = $this->hasMany->getRelated()->getFillable();
         return $this;
     }
 

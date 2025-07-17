@@ -9,13 +9,13 @@ class Multiple extends AbstractCollectData {
         $this->setColumnListing()->addPrimaryKey();
         foreach ($this->columnListing as $field) {
             if (isset($this->request->$field) && !is_null($this->request->$field)) {
-                $this->perpareCollectionData($collection, $field);
+                $this->prepareCollectionData($collection, $field);
             }
         }
         return $collection;
     }
 
-    private function perpareCollectionData(array &$collection, $field) {
+    private function prepareCollectionData(array &$collection, $field) {
         foreach ($this->request->$field as $key => $fieldData) {
             $collectionKey = (!is_null($this->primaryKey) && $this->primaryKey == $field) ? "id" : $field;
             $collectionValue = $this->checkFileValue($fieldData);
