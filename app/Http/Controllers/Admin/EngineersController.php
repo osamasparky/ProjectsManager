@@ -122,7 +122,8 @@ class EngineersController extends Controller
         $engineer = Engineer::find($id);
         $this->validateEmail($request, $engineer);
         try {
-            $info = collectData(['request' => $request, 'table' => 'engineer_informations', 'path' => $this->_path], 'flatten');
+            // use the correct table for engineer details
+            $info = collectData(['request' => $request, 'table' => 'engineer_details', 'path' => $this->_path], 'flatten');
             $documents = collectData(['request' => $request, 'table' => 'engineer_documents', 'path' => $this->_path, 'primaryKey' => 'document_id']);
             $engineer->update($request->all());
             $engineer->information()->update($info);
